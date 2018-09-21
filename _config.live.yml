@@ -1,0 +1,7 @@
+# Change compile directory to production
+source: src
+destination: staging
+
+env: staging
+
+url: "https://CHANGE.ME"

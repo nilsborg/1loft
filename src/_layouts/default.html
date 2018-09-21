@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <main class="mainContent">
+      {{ content }}
+    </main>
+
+    <script src="/assets/js/page.js{% if site.env != 'dev' %}?v={{ site.data.busters['js/page.js']}}{% endif %}" charset="utf-8"></script>
+  </body>
+</html>
