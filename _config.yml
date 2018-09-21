@@ -1,9 +1,7 @@
 # Site settings
-title: Your awesome title
+title: 1life 1loft | Bürogemeinschaft Co-Working Galluswarte Frankfurt
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  4-köpfige, sympathische Bürogemeinschaft hat 2 Plätze frei in offenem, Licht durchflutetem 140 qm Loft. Nähe Galluswarte, Frankfurt.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:3000" # the base hostname & protocol for your site
 

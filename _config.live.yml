@@ -1,7 +1,7 @@
 # Change compile directory to production
 source: src
-destination: staging
+destination: live
 
 env: staging
 
-url: "https://CHANGE.ME"
+url: "https://1loft.de"
