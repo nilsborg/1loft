@@ -2,27 +2,18 @@ stages:
   - build
   - deploy
 
-build_staging:
+build_live:
   stage: build
   cache:
     paths:
       - node_modules/
       - gems/
   script:
-    - node -v
-    - npm -v
     - bundle install --path gems/
-    - npm install
-    - gulp build:staging
+    - yarn install
+    - yarn run gulp build:live
   artifacts:
     paths:
-      - staging
+      - live
   only:
     - master
-
-#deploy_staging:
-#  stage: deploy
-#  script:
-#    - rsync -az --delete --progress staging/ nils@strandrover.com:/var/www/andersch.strandrover.com
-#  only:
-#    - master
