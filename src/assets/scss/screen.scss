@@ -107,3 +107,71 @@ i {
 .mainContent {
   padding: 5vw;
 }
+
+.mainFacts {
+  h2 {
+    max-width: 1000px;
+    line-height: 1.3;
+  }
+
+  p,
+  ul {
+    max-width: 500px;
+  }
+}
+
+.map,
+.contact {
+  box-shadow: 3vw 10vh 20vh rgba(#3a3a59, 0.25),
+    -2vw 5vh 10vh rgba(#ef3f61, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: 50vh;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 700px) {
+    width: 50%;
+  }
+}
+
+.contact {
+  max-width: 450px;
+}
+
+@media (min-width: 700px) {
+  .headlineWrapper {
+    perspective: 200vw;
+
+    .animatedHeadline {
+      transform: rotateY(30deg);
+    }
+  }
+
+  .infos {
+    perspective: 300vw;
+
+    .mainFacts,
+    .map {
+      margin-bottom: 10vh;
+    }
+
+    & > * {
+      transition: transform 450ms ease;
+      transform: rotateY(-10deg);
+
+      &:hover,
+      &:active,
+      &:focus {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+}
