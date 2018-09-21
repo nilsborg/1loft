@@ -17,3 +17,11 @@ build_live:
       - live
   only:
     - master
+
+deploy_live:
+  stage: deploy
+  script:
+    - yarn add netlify-cli
+    - yarn run netlify deploy -s $NETLIFY_SITE_ID -p live -t $NETLIFY_ACCESS_TOKEN
+  only:
+    - master
