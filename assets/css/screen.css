@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/**
+ * This is the main scss file which includes your
+ * various variables and partials and whatever else you might
+ * need.
+ *
+ * Gulp will compile this over to ../css/screen.css (instead of
+ * leaving this job to jekyll, because we love browsersync
+ * and the flexibility of gulp)
+ */
+@font-face {
+  font-family: "Hela";
+  src: url("../fonts/HelaBasicGX.ttf") format("truetype-variations");
+  font-weight: 100 700; }
+
+@keyframes fontWeights {
+  from {
+    font-variation-settings: "wght" 100; }
+  to {
+    font-variation-settings: "wght" 700; } }
+
+body {
+  font-family: "Menlo", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #3a3a59; }
+
+h1,
+h2 {
+  font-family: "Hela", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif; }
+
+h1 {
+  font-weight: 600; }
+
+h2 {
+  font-weight: 100;
+  font-size: 10vw;
+  color: #ef3f61; }
+  @media (min-width: 700px) {
+    h2 {
+      font-size: 5vw; } }
+em {
+  font-style: normal;
+  color: #db3b61;
+  box-shadow: inset 0 -0.5em 0 0 rgba(219, 59, 97, 0.2); }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+  ul li {
+    padding-left: 2em;
+    position: relative; }
+    ul li:before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #11ddc0; }
+
+i {
+  font-style: normal;
+  opacity: 0.5; }
+
+.animatedHeadline {
+  font-size: 18vw;
+  line-height: 1;
+  margin: 1vh 0; }
+  @media (min-width: 700px) {
+    .animatedHeadline {
+      font-size: 10vw; } }
+  .animatedHeadline span {
+    animation: fontWeights 20s ease-in-out alternate infinite;
+    display: block; }
+    .animatedHeadline span:last-child {
+      animation-delay: 5s; }
+
+.mainContent {
+  padding: 5vw; }
+
+.mainFacts h2 {
+  max-width: 1000px;
+  line-height: 1.3; }
+
+@media (min-width: 700px) {
+  .mainFacts .copyTextWrapper {
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 3vw 3vw 3vw 0; } }
+
+@media (min-width: 1200px) {
+  .mainFacts .copyTextWrapper {
+    font-size: 1vw;
+    max-width: 30vw; } }
+
+.map,
+.contact {
+  box-shadow: 3vw 10vh 20vh rgba(58, 58, 89, 0.4), -2vw 5vh 10vh rgba(239, 63, 97, 0.3);
+  border-radius: 10px;
+  overflow: hidden; }
+
+.map {
+  width: 100%;
+  height: 50vh; }
+  .map iframe {
+    width: 100%;
+    height: 100%; }
+  @media (min-width: 700px) {
+    .map {
+      width: 50%;
+      max-width: 1000px;
+      max-height: 600px; } }
+.contact {
+  max-width: 450px; }
+
+@media (min-width: 700px) {
+  .infosWrapper {
+    position: absolute;
+    z-index: 10; }
+    .infosWrapper .infos .mainFacts,
+    .infosWrapper .infos .map {
+      margin-bottom: 10vh; } }
+
+@media (min-width: 700px) {
+  .fottosWrapper {
+    perspective: 300vw;
+    padding-left: 30%;
+    padding-top: 50vh; } }
+
+@media (min-width: 700px) {
+  .fottosWrapper .fottos {
+    transform: rotateY(-1deg); } }
+
+.fottosWrapper .fottos .einsFotto {
+  margin: 0;
+  margin-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .fottosWrapper .fottos .einsFotto img {
+    display: block;
+    width: 100%;
+    border-radius: 0.5vw;
+    box-shadow: 3vw 0 2vw rgba(58, 58, 89, 0.3); }
+  .fottosWrapper .fottos .einsFotto figcaption {
+    font-size: 1.2em;
+    background-color: rgba(239, 63, 97, 0.8);
+    line-height: 1;
+    padding: 1vh 2vw;
+    margin-top: -1em;
+    box-shadow: 0 -0.5em 1em rgba(239, 63, 97, 0.3);
+    border-radius: 0.2em; }
+
+/*# sourceMappingURL=screen.css.map */

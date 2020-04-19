@@ -1,7 +1,0 @@
-# Change compile directory to production
-source: src
-destination: live
-
-env: staging
-
-url: "https://1loft.de"
